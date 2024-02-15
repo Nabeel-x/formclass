@@ -7,7 +7,7 @@ class Button{
     public $type;
     public $icon;
     function __construct($n,string $i,string $t,$on,$ic){
-        $content = $n!=null? $n:$ic;
+        $content = $n.$ic;
         $this->name =  $n;
         $this->id = $i;
         $this->type = $t;

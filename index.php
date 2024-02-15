@@ -16,8 +16,8 @@
         include 'button.php';
         $user = new Input('uname','text','uname','username',"required");
         $pass = new Input('pass','password','pass','password',"required");
-        $buttons = new Button(null,'loginbtn','submit',null,"<i class='bi bi-box-arrow-in-right'></i>");
-        $buttonr = new Button(null,'resetbtn','reset',null,"<i class='bi bi-trash'></i>");
+        $buttons = new Button("Login",'loginbtn','submit',null,"<i class='bi bi-box-arrow-in-right'></i>");
+        $buttonr = new Button("Clear",'resetbtn','reset',null,"<i class='bi bi-trash'></i>");
         $formelements = array(
             $user->inputbar,$pass->inputbar,
             $buttons->deploy.$buttonr->deploy 
