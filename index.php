@@ -14,13 +14,13 @@
     <?php
         include 'form.php';
         include 'button.php';
-        $user = new Input('uname','text','uname','username');
-        $pass = new Input('pass','password','pass','password');
-        $button = new Button(null,'loginbtn','submit',null,"<i class='bi bi-box-arrow-in-right'></i>");
-        $reset = new Reset('clearbtn','clearbtn','clear');
+        $user = new Input('uname','text','uname','username',"required");
+        $pass = new Input('pass','password','pass','password',"required");
+        $buttons = new Button(null,'loginbtn','submit',null,"<i class='bi bi-box-arrow-in-right'></i>");
+        $buttonr = new Button(null,'resetbtn','reset',null,"<i class='bi bi-trash'></i>");
         $formelements = array(
             $user->inputbar,$pass->inputbar,
-            $button->deploy.$reset->inputbar 
+            $buttons->deploy.$buttonr->deploy 
         );
         $form = new form('login','post',null);
         $form->create($formelements);

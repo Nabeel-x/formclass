@@ -5,7 +5,7 @@ class Input{
     public string $type;
     public string $placeholder;
     public string $inputbar;
-    function __construct(string $n,string $t,string $i,string $p){
+    function __construct(string $n,string $t,string $i,string $p,$extra){
         $this->name = $n;
         $this->type = $t;
         $this->placeholder = $p;
@@ -14,7 +14,7 @@ class Input{
         type = '$this->type' 
         name = '$this->name' 
         id = '$this->id' 
-        placeholder = '$this->placeholder'
+        placeholder = '$this->placeholder' ".$extra."
         >";
     }
 }

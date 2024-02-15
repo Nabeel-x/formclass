@@ -7,3 +7,8 @@ body{
 #heading{
     color: brown;
 }
+
+tr:last-child td{
+    display: flex;
+    justify-content: center;
+}
