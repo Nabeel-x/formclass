@@ -57,13 +57,13 @@
         //creating a form without tabular format. create method does not return anything
         $form->create($formelements);
 
-        echo "<h2>This is form created by the tabulate method</h2>";
+        echo "<h2>This is form returned by the tabulate method</h2>";
         //passing the array to the tabulate method creates a tabular form and returns it so it can be printed right away
         //create method is not necessary for tabulate method
         echo $form->tabulate($formelements);
 
         echo "<h2>This is form created by the create method and displayed using the display method</h2>";
-        //We can display a form created by the created by a create method using the display method of the form class
+        //We can display a form created by create method using the display method of the form class
         echo $form->display();
 
 
