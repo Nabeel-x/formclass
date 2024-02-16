@@ -1,7 +1,7 @@
 <?php
-class Submit extends input{
+class Submit extends Input{
     public $value;
-    public function __construct(string $n,string $i,string $v) {
+    public function __construct($n,$i,$v) {
         $this->name = $n;
         $this->value = $v;
         $this->id = $i;
