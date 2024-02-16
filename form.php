@@ -23,7 +23,7 @@ class Form{
             $tabularform = $tabularform."<tr><td>".$e."</td></tr>\n";
         }
         $tabularform = $tabularform."</table>\n";
-        return "<form>".$tabularform."</form>\n";
+        return "<form name = '$this->name' method = '$this->method' action = '$this->action'>".$tabularform."</form>\n";
     }
     function create($arr){
         foreach( $arr as $e){

@@ -90,7 +90,7 @@
         echo $form->display();
 
 
-        if($_SERVER['REQUEST_METHOD'] == "POST"){
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $username = $_POST['uname'];
             $password = $_POST['pass'];
             echo "<p>Your username is $username<br>password is $password</p>";
