@@ -17,7 +17,7 @@ class Select{
     function __construct($n,$i,$arr){
         $this->name = $n;
         $this->id = $i;
-        $this->selectbar = "<select name = '$this->id', id = '$this->id'>\n";
+        $this->selectbar = "<select name = '$this->name' id = '$this->id'>\n";
         foreach($arr as $e){
             $this->selectbar = $this->selectbar.$e."\n";
         }

@@ -93,7 +93,10 @@
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $username = $_POST['uname'];
             $password = $_POST['pass'];
-            echo "<p>Your username is $username<br>password is $password</p>";
+            $s = $_POST['selector'];
+            $s1 = $_POST['selector2'];
+            echo "<p>Your username is $username<br>password is $password";
+            echo "1option =>$s option=> $s1 </p>";
         }
     ?>
 </body>
