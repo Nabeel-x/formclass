@@ -14,6 +14,7 @@
     <?php
         include 'form.php';
         include 'button.php';
+        include 'select.php';
         //input and button can be created by using the respective class
         //the parameter are name, type, id, placeholder, extra(like required, min, max etc)
         //any non necessary values can be put to null
@@ -35,9 +36,27 @@
         $hiddeninputbar = new Hidden('hiddenbtn','hbtn1','requiredvalue');
 
         //labels can be create by the static method label in the form class
-        $userlabel = form::label('uname','username: ');
-        $passwordlabel = form::label('pass','password: ');
-        
+        $userlabel = Form::label('uname','username: ');
+        $passwordlabel = Form::label('pass','password: ');
+
+        //creating a select and multiple option objects;
+        $op1 = new Option('option1','option1');
+        $op2 = new Option('option2','option2');
+        $oparr = array(
+            $op1->optiontag,$op2->optiontag
+        );
+        //or
+        $opparr2[]=(new Option('option1','option1'))->optiontag;
+        $opparr2[]=(new Option('option2','option2'))->optiontag;
+        $opparr2[]=(new Option('option3','option3'))->optiontag;
+        $opparr2[]=(new Option('option4','option4'))->optiontag;
+
+        $select = new Select('selector',null,$oparr);
+        $selectlabel = Form::label('selector','selecton1: ');
+
+        $select2 = new Select('selector2',null,$opparr2);
+        $select2label = Form::label('selector2','selection2: ');
+
         //create an array to store the elements that are to be passed into the form class
         //in tabulate method, the data to be displayed in the the same row should be seperated by a period(.)
         //and the data to display in different row should be seperated by comma(,)
@@ -48,8 +67,12 @@
         $formelements = array(
             $userlabel.$user->inputbar,
             $passwordlabel.$pass->inputbar,
+            $selectlabel.$select->selectbar,
+            $select2label.$select2->selectbar,
             $buttons->deploy.$buttonr->deploy 
         );
+
+        
 
         //creating a form object with name,method and action
         $form = new form('login','post',null);
