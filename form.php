@@ -4,27 +4,24 @@ include 'hidden.php';
 include 'submit.php';
 include 'reset.php';
 class Form{
-    public string $name;
-    public string $method;
-    public $action;
-    public $formDeploy;
-    function __construct(string $n,string $m,$a){
-        $this->name = $n;
-        $this->method = $m;
-        $this->action = $a;
-        $this->formDeploy = "<form name = '$this->name' method = '$this->method' action = '$this->action'>\n";
+    public string $formname;
+    public string $formmethod;
+    public string $formaction;
+    public string $formDeploy;
+    public string $formid;
+    public string $formclass;
+    function __construct(string $name = '',string $method = '',string $action = '',string $class = '',string $id = ''){
+        $this->formname = $name;
+        $this->formmethod = $method;
+        $this->formaction = $action;
+        $this->formid = $id;
+        $this->formclass = $class;
+        $this->formDeploy = "<form name = '$this->formname' method = '$this->formmethod' action = '$this->formaction' id= '$this->formid' class = '$this->formclass'>\n";
     }
     static function label($name,$value){
         return "<label for = '$name'>$value</label>";
     }
-    function tabulate($arr){
-        $tabularform = "<table>\n";
-        foreach($arr as $e){
-            $tabularform = $tabularform."<tr><td>".$e."</td></tr>\n";
-        }
-        $tabularform = $tabularform."</table>\n";
-        return "<form name = '$this->name' method = '$this->method' action = '$this->action'>".$tabularform."</form>\n";
-    }
+
     function create($arr){
         foreach( $arr as $e){
             $this->formDeploy = $this->formDeploy.$e."\n";

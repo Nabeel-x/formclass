@@ -1,15 +1,10 @@
 <?php
 class Reset extends Input{
-    public $value;
-    function __construct($n,$i,$v){
-        $this->name = $n;
-        $this->value = $v;
-        $this->id = $i;
-        $this->inputbar = "<input 
-        type = 'reset' 
-        name = '$this->name' 
-        id = '$this->id' 
-        value = '$this->value';
-        >";
+    public $inputvalue;
+    function __construct($value,$class,$id){
+        $this->inputvalue = $value;
+        $this->inputclass = $class;
+        $this->inputid = $id;
+        $this->inputbar = "<input type = 'reset' value = '$this->inputvalue' class = '$this->inputclass' id = '$this->inputid' >";
     }
 }

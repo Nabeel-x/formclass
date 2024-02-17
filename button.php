@@ -1,18 +1,20 @@
 <?php
 class Button{
-    public $name;
-    public $id;
-    public $onclick;
-    public $deploy;
-    public $type;
-    public $icon;
-    function __construct($n,$i,$t,$on,$ic){
-        $content = $n.$ic;
-        $this->name =  $n;
-        $this->id = $i;
-        $this->type = $t;
-        $this->onclick = $on;
-        $this->icon = $ic;
-        $this->deploy = "<button id = '$this->id' type = '$this->type' onclick = '$this->onclick'>".$content."</button>";
+    public string $buttonname;
+    public string $buttonid;
+    public string $buttonclass;
+    public string $buttononclick;
+    public string $deploy;
+    public string $buttontype;
+    public string $buttonicon;
+    function __construct(string $name = '',string $type = '',string $onclick = '',string $icon = '',string $class = '',string $id = ''){
+        $content = $name.$icon;
+        $this->buttonname =  $name;
+        $this->buttonclass = $class;
+        $this->buttonid = $id;
+        $this->buttontype = $type;
+        $this->buttononclick = $onclick;
+        $this->buttonicon = $icon;
+        $this->deploy = "<button type = '$this->buttontype' class = '$this->buttonclass' id = '$this->buttonid' onclick = '$this->buttononclick'>".$content."</button>";
     }
 }

@@ -1,10 +1,10 @@
 <?php
 class Hidden extends Input{
-    public $value;
-    function __construct($n,$i,$v){
-        $this->name = $n;
-        $this->id = $i;
-        $this->value = $v;
-        $this->inputbar = "<input type = 'hidden' name = '$this->name' id = '$this->id' value = '$this->value'>\n";
+    public $hiddenvalue;
+    function __construct(string $name,$value,string $id = ''){
+        $this->inputname = $name;
+        $this->inputid = $id;
+        $this->hiddenvalue = $value;
+        $this->inputbar = "<input type = 'hidden' name = '$this->inputname' value = $this->hiddenvalue id = '$this->inputid'>\n";
     } 
 }
