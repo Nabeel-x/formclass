@@ -91,12 +91,15 @@
         );
         echo $hiddenform->display();
 
-        echo "<h2>This is another form which sends hidden data that is disguised as a button</h2>";
+        echo "<h2>This is another form which sends hidden data to another page that is disguised as a button</h2>";
+        echo "<p>Hidden data is shown in the disabled input bar</p>";
+        echo "<p><mark>Note: the disabled input exist outside of form</mark></p>";
         //hidden form that can send data to server
         //a random id is generated and is sent via post request method to newpage.php page
         //this is the best method to create multiple edit or delete buttons
         //body is like create but returns the form data
         $id = rand(10,100000);
+        echo form::label('randmonvalue','Random Value Generator').(new Input('randomvalue','number',extra:"value = $id disabled"))->inputbar."<br>";
         echo 
         (new Form(
                 name:'senddata',
@@ -106,7 +109,7 @@
         )->body(
             [
                 (new Hidden(name:'id',value:$id))->inputbar,
-                (new Button(name:'delete',type:'submit'))->deploy
+                (new Button(type:'submit',icon:"<i class='bi bi-trash'></i>"))->deploy
             ]
         );
 
