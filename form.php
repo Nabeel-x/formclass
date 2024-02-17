@@ -16,7 +16,7 @@ class Form{
         $this->formaction = $action;
         $this->formid = $id;
         $this->formclass = $class;
-        $this->formDeploy = "<form name = '$this->formname' method = '$this->formmethod' action = '$this->formaction' id= '$this->formid' class = '$this->formclass'>\n";
+        $this->formDeploy = "\n<form name = '$this->formname' method = '$this->formmethod' action = '$this->formaction' id= '$this->formid' class = '$this->formclass'>\n";
     }
     static function label($name,$value){
         return "<label for = '$name'>$value</label>";
