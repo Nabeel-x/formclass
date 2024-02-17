@@ -91,6 +91,25 @@
         );
         echo $hiddenform->display();
 
+        echo "<h2>This is another form which sends hidden data that is disguised as a button</h2>";
+        //hidden form that can send data to server
+        //a random id is generated and is sent via post request method to newpage.php page
+        //this is the best method to create multiple edit or delete buttons
+        //body is like create but returns the form data
+        $id = rand(10,100000);
+        echo 
+        (new Form(
+                name:'senddata',
+                method:'post',
+                action:'newpage.php'
+            )
+        )->body(
+            [
+                (new Hidden(name:'id',value:$id))->inputbar,
+                (new Button(name:'delete',type:'submit'))->deploy
+            ]
+        );
+
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if(isset($_POST['uname'])){
                 $username = $_POST['uname'];

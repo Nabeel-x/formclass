@@ -28,6 +28,13 @@ class Form{
         }
         $this->formDeploy=$this->formDeploy."</form>\n";
     }
+    function body($arr){
+        foreach( $arr as $e){
+            $this->formDeploy = $this->formDeploy.$e."\n";
+        }
+        $this->formDeploy=$this->formDeploy."</form>\n";
+        return $this->formDeploy;
+    }
     function display(){
         return $this->formDeploy;
     }
