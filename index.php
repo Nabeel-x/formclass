@@ -97,8 +97,8 @@
                 $password = $_POST['pass'];
                 $s = $_POST['selector'];
                 $s1 = $_POST['selector2'];
-                echo "<p>Your username is $username<br>password is $password";
-                echo "1option =>$s option=> $s1 </p>";    
+                echo "<p>Your username is $username and password is $password</p>";
+                echo "<p>selection1 => $s selection2 => $s1 </p>";    
             }
             if(isset($_POST['hiddenvalue'])){
                 $val = $_POST['hiddenvalue'];
