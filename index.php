@@ -81,13 +81,13 @@
 
         echo "<h2>This is a form which sends hidden data that is disguised as a button</h2>";
         //hidden form that can send data to server
-        $hiddenvalue = 12345;
+        $hiddenvalue = 123456;
         $hiddenform = new Form('senddata','post');
         $hiddenform->create(
-            array(
+            [
                 (new Hidden('hiddenvalue',$hiddenvalue))->inputbar,
                 (new Button(type:'submit',icon:"<i class = 'bi bi-box-arrow-in-right'></i>"))->deploy
-            )
+            ]
         );
         echo $hiddenform->display();
 
