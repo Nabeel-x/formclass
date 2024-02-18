@@ -1,7 +1,7 @@
 <?php
 class Reset extends Input{
     public $inputvalue;
-    function __construct($value,$class,$id){
+    function __construct($value = '',$class = '',$id = ''){
         $this->inputvalue = $value;
         $this->inputclass = $class;
         $this->inputid = $id;

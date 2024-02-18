@@ -30,7 +30,7 @@
 
         //the value in submit and reset is their shown name
         $submitinputbar = new Submit('submitbtn');
-        $resetinputbar = new Submit('resetbtn');
+        $resetinputbar = new Reset('resetbtn');
 
         //the value in hidden wont be shown but will be sent to the server
         $hiddeninputbar = new Hidden('hiddenbtn','hiddenvalue');
